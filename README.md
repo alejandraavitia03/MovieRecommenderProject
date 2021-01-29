@@ -36,13 +36,10 @@
 * Output: 
 	With the given input we will return the user a customized feed for them and display other users reviews and ratings. 
 * Design patterns we will be using:
-	* Abstract Factory: This design pattern was used because of its 
+	* Abstract Factory: This design pattern was picked because it can provide an interface for creating families. We assume this will help with storing data. Unlike visitor pattern being used for individual lists, this is for storing moves already by genres which will be easier to pull. We have an umbrella of movie with different categories. These different category(genres) creations under the same umbrella is where this design pattern will be useful.  
 
 	* Visitor Pattern: This design pattern was picked becuase it allows us to separate the algorithm from our object structure. Also we could possible define a new operations for some classes of an object withought changing the classes. An error we are assuming to encounter is when making the MovieLibrary class there are alot of genres to filter and  that would require a lot of getter functions. With the Visitors I hope to separate the data from the algorithm. We are hoping to offload the algorithm to visitor implementations and add functionality by creating more visitors instead of having to modify and overload the class with the users movie library.    
 		
- 	* Why you picked this pattern and what feature you will implement with it
- >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
- >   * Why the chosen design pattern will lead to a good solution to that problem
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
