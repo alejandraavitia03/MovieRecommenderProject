@@ -1,7 +1,8 @@
  # FAN Spotlight 
  > Authors: Frances Isabelle Cristobal(https://github.com/frxncrxs), Alejandra Avitia-Davila(https://github.com/alejandraavitia03), Neda Karemi(https://github.com/nedurland)
  
- > You will be forming a group of **THREE** students and working on an interesting project. A list of proposed project ideas that have been successful in previous quarters is given in the project specifications link on iLearn. You can select an idea from the list and decide which design patterns you will use to implement it. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal. Your project needs to implement two design patterns.The project work should be divided almost equally among team members and each member is expected to work on at least one design pattern (more than one partner may work on a pattern) and some of its test cases. You can of course help each other, but it needs to be clear who will be responsible for which patterns and for which features.
+ > Our final project for CS 100 at UC Riverside. Our group is consisted of three team members and we have worked together to design a movie library software. 
+ 
  
  > ## Expectations
  > * Incorporate **at least two** distinct design patterns. You need to include at least *one* design pattern that we will teach this session:
@@ -13,11 +14,12 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
- > * What will be the input/output of your project?
+ > We are going to create a movie library manager that allows users to choose movies based off genre and reviews. We will also be incorporating a watched list that allows the user to see which movies they have watched and allows them to leave ratings and reviews for others to see. We will be using an easy to use GI for our software
+ > The reason we have chosen to create a movie library software is because we are huge fans of films and are currently unsatisfied with different applications available to find movies based on ratings and genre. By creating this software we are hoping to make a much more user friendly and simple experience for ourselves and other movie fanatics who are having trouble picking a movie.
+ > C++
+ > Qt, https://www.qt.io/ - The Qt framework is cross-platform mostly used for developing desktop applications. Many big named companies use this platform to create their UI, for example: Mercedes Benz. 
+ > Input: User input of genre they would like, rating meter, and reviews. 
+ > Output: What movie the user will be recommended to watch, reviews for the user to read. 
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
  >   * Why you picked this pattern and what feature you will implement with it
  >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
