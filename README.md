@@ -4,18 +4,7 @@
  * Frances Isabelle Cristobal(https://github.com/frxncrxs)
  * Alejandra Avitia-Davila(https://github.com/alejandraavitia03)
  * Neda Karemi(https://github.com/nedurland)
- 
 
- 
- 
- > ## Expectations
- > * Incorporate **at least two** distinct design patterns. You need to include at least *one* design pattern that we will teach this session:
- >   * Composite, Strategy, Abstract Factory, Visitor, or Decorator
- > * All design patterns need to be linked together (it can't be two distinct projects)
- > * Your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
 
 ## Project Description
   Our goal is to create a movie library/feed manager that allows users to have a feed with recommended movies based off genre and reviews. We will also be incorporating a library system which will allow them to keep track of movies they've watched and want to watch. Our software will allow users to leave ratings and reviews for others to see. We will be using an easy to use GI for our software.
