@@ -1,7 +1,11 @@
  # FAN Spotlight 
- > Authors: Frances Isabelle Cristobal(https://github.com/frxncrxs), Alejandra Avitia-Davila(https://github.com/alejandraavitia03), Neda Karemi(https://github.com/nedurland)
+ > Our final project for CS 100 at UC Riverside. Our group is consisted of three team members and we collaborating together to design a movie library software. 
+ > ## Authors: 
+ >   * Frances Isabelle Cristobal(https://github.com/frxncrxs)
+ >   * Alejandra Avitia-Davila(https://github.com/alejandraavitia03)
+ >   * Neda Karemi(https://github.com/nedurland)
  
- > Our final project for CS 100 at UC Riverside. Our group is consisted of three team members and we have worked together to design a movie library software. 
+
  
  
  > ## Expectations
