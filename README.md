@@ -1,9 +1,9 @@
- # FAN Spotlight 
- > Our final project for CS 100 at UC Riverside. Our group is consisted of three team members and we collaborating together to design a movie library software. 
- > ## Authors: 
- >   * Frances Isabelle Cristobal(https://github.com/frxncrxs)
- >   * Alejandra Avitia-Davila(https://github.com/alejandraavitia03)
- >   * Neda Karemi(https://github.com/nedurland)
+# FAN Spotlight 
+ Our final project for CS 100 at UC Riverside. Our group is consisted of three team members and we collaborating together to design a movie library software. 
+## Authors: 
+ * Frances Isabelle Cristobal(https://github.com/frxncrxs)
+ * Alejandra Avitia-Davila(https://github.com/alejandraavitia03)
+ * Neda Karemi(https://github.com/nedurland)
  
 
  
@@ -15,21 +15,31 @@
  > * Your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
  > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
+ > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
 
 ## Project Description
- > We are going to create a movie library manager that allows users to choose movies based off genre and reviews. We will also be incorporating a watched list that allows the user to see which movies they have watched and allows them to leave ratings and reviews for others to see. We will be using an easy to use GI for our software
- > * The reason we have chosen to create a movie library software is because we are huge fans of films and are currently unsatisfied with different applications available to find movies based on ratings and genre. By creating this software we are hoping to make a much more user friendly and simple experience for ourselves and other movie fanatics who are having trouble picking a movie.
- > * Language and Tools used:
- >   * C++
- >   * Qt, https://www.qt.io/ - The Qt framework is cross-platform mostly used for developing desktop applications. Many big named companies use this platform to create their UI, for example: Mercedes Benz. 
- > * Input: User input of genre they would like, rating meter, and reviews. 
- > * Output: What movie the user will be recommended to watch, reviews for the user to read. 
- > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
- >   * Why you picked this pattern and what feature you will implement with it
- >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
- >   * Why the chosen design pattern will lead to a good solution to that problem
- > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+  Our goal is to create a movie library/feed manager that allows users to have a feed with recommended movies based off genre and reviews. We will also be incorporating a library system which will allow them to keep track of movies they've watched and want to watch. Our software will allow users to leave ratings and reviews for others to see. We will be using an easy to use GI for our software.
+### Why this is our choice:
+ The reason we have chosen to create a movie library/feed software is because we are huge fans of films and are currently unsatisfied with different applications available to find movies based on ratings and genre. By creating this software we are hoping to make a much more user friendly and simple experience for ourselves and other movie fanatics who are having trouble picking a movie.
+### How we will carry on:
+* Language and Tools used:
+	* C++ - The language we will be using.
+	* Qt  - The Qt framework is cross-platform mostly used for developing desktop applications. Many big named companies use this platform to create their UI, for example: Mercedes Benz.(https://www.qt.io/) 
+* Input: 
+	Like Pinterest or We Heart It, users will be prompted to give input:
+	* Favorite:
+		* Movies
+		* TV Shows 
+	* Personalized
+		* Reviews 
+		* Ratings
+* Output: 
+	With the given input we will return the user a customized feed for them and display other users reviews and ratings. 
+* Design patterns we will be using:
+	* Abstract Factory: This design pattern was picked because it can provide an interface for creating families. We assume this will help with storing data. Unlike visitor pattern being used for individual lists, this is for storing moves already by genres which will be easier to pull. We have an umbrella of movie with different categories. These different category(genres) creations under the same umbrella is where this design pattern will be useful.  
+
+	* Visitor Pattern: This design pattern was picked becuase it allows us to separate the algorithm from our object structure. Also we could possible define a new operations for some classes of an object withought changing the classes. An error we are assuming to encounter is when making the MovieLibrary class there are alot of genres to filter and  that would require a lot of getter functions. With the Visitors I hope to separate the data from the algorithm. We are hoping to offload the algorithm to visitor implementations and add functionality by creating more visitors instead of having to modify and overload the class with the users movie library.    
+		
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
