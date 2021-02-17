@@ -25,9 +25,9 @@
 * Output: 
 	With the given input we will return the user a customized feed for them and display other users reviews and ratings. 
 * Design patterns we will be using:
-	* 
+	* Strategy Pattern: This design pattern was picked because it allow us to have something that does one thing and implement them in different ways. For example we have two interfaces, Sort and Recommend that will be called differently. Recommend will allow us to recommend by Genre, Director and Actors. The sorting algorithms will sort the recommended list by ratings and release date.
 
-	* Visitor Pattern: This design pattern was picked becuase it allows us to separate the algorithm from our object structure. Also we could possible define a new operations for some classes of an object withought changing the classes. An error we are assuming to encounter is when making the MovieLibrary class there are alot of genres to filter and  that would require a lot of getter functions. With the Visitors I hope to separate the data from the algorithm. We are hoping to offload the algorithm to visitor implementations and add functionality by creating more visitors instead of having to modify and overload the class with the users movie library.    
+	* Composite Pattern:  
 		
 
  > ## Phase II
