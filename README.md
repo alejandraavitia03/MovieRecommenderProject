@@ -25,7 +25,7 @@
 * Output: 
 	With the given input we will return the user a customized feed for them and display other users reviews and ratings. 
 * Design patterns we will be using:
-	* Abstract Factory: This design pattern was picked because it can provide an interface for creating families. We assume this will help with storing data. Unlike visitor pattern being used for individual lists, this is for storing moves already by genres which will be easier to pull. We have an umbrella of movie with different categories. These different category(genres) creations under the same umbrella is where this design pattern will be useful.  
+	* 
 
 	* Visitor Pattern: This design pattern was picked becuase it allows us to separate the algorithm from our object structure. Also we could possible define a new operations for some classes of an object withought changing the classes. An error we are assuming to encounter is when making the MovieLibrary class there are alot of genres to filter and  that would require a lot of getter functions. With the Visitors I hope to separate the data from the algorithm. We are hoping to offload the algorithm to visitor implementations and add functionality by creating more visitors instead of having to modify and overload the class with the users movie library.    
 		
@@ -41,8 +41,7 @@
  >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
-![Composite Pattern](FAN Spotlight-Composite Pattern.png)
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
+In our UML folder.
  
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
