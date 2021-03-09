@@ -363,13 +363,35 @@ int main() {
 		}
 		case 3:
 		{
-			string entry;
-			cout << "choose a genre: ";
-			cin >> entry;
-			r.setSortFunction(CompareByScoreDescending); //sorts by rating
-			r.AddGenre(entry); // sends user entry too add genre
-//			r.AddGenre("Fantasy");
-			r.RecommendByGenres(); // displays recommends user entry
+			string entry1,entry2;
+			int amount = 0;
+			cout << "would you like to add 1 or 2 genres: ";
+			cin >> amount;
+
+			if (amount == 1)
+			{
+				cout << "choose a genre: ";
+				cin >> entry1;
+				r.setSortFunction(CompareByScoreDescending); //sorts by rating
+				r.AddGenre(entry1); // sends user entry too add genre
+				r.RecommendByGenres(); // displays recommends user entry
+			}
+			if (amount == 2)
+			{
+				cout << "enter genre 1: ";
+				cin >> entry1;
+				cout << "enter genre 2: ";
+				cin >> entry2;
+				r.setSortFunction(CompareByScoreDescending); //sorts by rating
+				r.AddGenre(entry1); // sends user entry too add genre
+				r.AddGenre(entry2);
+				r.RecommendByGenres(); // displays recommends user entry
+			}
+			else
+			{
+				cout << "press any key to exit";
+
+			}
 		}
 		case 4:
 		{
@@ -378,7 +400,7 @@ int main() {
 			cin >> t;
 			r.setSortFunction(CompareByScoreDescending);
 			r.AddMovie(t);
-			r.RecommendByTopActor; // recommends by top billed actor in that movie title
+			r.RecommendByTopActor(); // recommends by top billed actor in that movie title
 
 		}
 		default:
