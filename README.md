@@ -35,6 +35,7 @@
 Composite Pattern
 
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Composite%20Pattern%20.png)
+
 Strategy Pattern
 
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Strategy%20Pattern.png)
