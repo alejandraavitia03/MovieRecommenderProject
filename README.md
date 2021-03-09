@@ -33,10 +33,14 @@
 
 ## Class Diagram
 Composite Pattern
+
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Composite%20Pattern%20.png)
 Strategy Pattern
+
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Strategy%20Pattern.png)
+
 Combined Patterns
+
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Combined%20Patterns.png)
 Overall
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/3df8d614f20d55343067f6b030f0f667bf8e86e6/UML's/FAN%20Spotlight-Overall.png)
