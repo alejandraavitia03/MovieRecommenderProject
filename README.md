@@ -13,7 +13,7 @@
 ### How we will carry on:
 * Language and Tools used:
 	* C++ - The language we will be using.
-	* Qt  - The Qt framework is cross-platform mostly used for developing desktop applications. Many big named companies use this platform to create their UI, for example: Mercedes Benz.(https://www.qt.io/) 
+
 * Input: 
 	Like Pinterest or We Heart It, users will be prompted to give input:
 	* Favorite:
