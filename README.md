@@ -32,6 +32,7 @@
 
 
 ## Class Diagram
+![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/3df8d614f20d55343067f6b030f0f667bf8e86e6/UML's/FAN%20Spotlight-Overall.png)
 In our UML folder.
  
 
