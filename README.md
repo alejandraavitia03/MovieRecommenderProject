@@ -59,9 +59,9 @@ Overall
  ## Installation/Usage
  Our project user interface will be through the executable.
  Instructions on installing and running our application:
- 		1. Download our code from the master branch
- 		2. Open project on an IDE or text editor.
- 		3. Run the program
+  * Download our code from the master branch
+  * Open project on an IDE or text editor.
+  * Run the program
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
