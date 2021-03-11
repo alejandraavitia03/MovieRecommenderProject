@@ -4,24 +4,24 @@
 //  //  Created by Alejandra A on 2/28/21.
 //  //
 
-
-
 #ifndef MoviePlayer_h
 #define MoviePlayer_h
 
-#include "MovieComponent.hpp"
+#include "MovieComponent.h"
 
-class MoviePlayer{
-    MovieComponent movieList;
+class MoviePlayer : public MovieComponent {
     
-    MoviePlayer(MovieComponent newMovieList){
-        movieList = newMovieList;
+    MovieComponent *movieList;
+    
+    MoviePlayer(MovieComponent &newMovieList){
+        movieList = &newMovieList;
     }
+    
     // This will call the display function from out interface on every movie or moviegrenre stored in our movielist
     void getMovieList(){
-        movieList.displayMovieInfo();
+        movieList.displayInfo();
     }
-}
-
+};
 #endif /* MoviePlayer_h */
+
 
