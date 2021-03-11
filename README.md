@@ -30,27 +30,23 @@
 	* Composite Pattern:  
 		
 
- > ## Phase II
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
 
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > 
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
-In our UML folder.
+Composite Pattern
+
+![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Composite%20Pattern%20.png)
+
+Strategy Pattern
+
+![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Strategy%20Pattern.png)
+
+Combined Patterns
+
+![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/e152d15ffcb8df1e0f2364876f3e9bd9f7677bd9/UML's/FAN%20Spotlight-Combined%20Patterns.png)
+Overall
+![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/3df8d614f20d55343067f6b030f0f667bf8e86e6/UML's/FAN%20Spotlight-Overall.png)
+
  
- > ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
- >   - How effective your last sprint was (each member should talk about what they did)
- >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- >   - What tasks you are planning for this next sprint.
 
  > ## Final deliverable
  > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 

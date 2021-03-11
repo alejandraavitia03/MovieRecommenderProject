@@ -1,5 +1,4 @@
-// ConsoleMovieRecommnder.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
 #include <fstream>
@@ -16,9 +15,12 @@ int menu(int* choice)
 {
 
 	cout << "1. view movie database" << endl;
-	cout << "2. Recommend by actor" << endl;
+	cout << "2. Recommend by top billed actors" << endl;
 	cout << "3. recommend by genre" << endl;
-	cout << "4. recommend by movie title" << endl;
+	cout << "4. recommend by director" << endl;
+	cout << "5. recommend by movies actor played in" << endl;
+
+	cout << "input choice number: ";
 	cin >> *choice;
 	return *choice;
 
@@ -319,6 +321,7 @@ enum Options {
 	DISPLAY_ACTOR,
 
 };
+
 int main() {
 
 	ifstream file("movie11.txt");
@@ -328,7 +331,6 @@ int main() {
 
 	MovieDB db(file);
 	Recommender r(&db);
-
 	//r.setSortFunction(CompareByScoreDescending);
 	//r.AddMovie("Mr. & Mrs. Smith");
 	//r.AddMovie("Bad Boys II");
@@ -340,17 +342,17 @@ int main() {
 
 	//	r.DisplayGenre("Horror");
 
-	do {
+	
 		menu(&choice);
-		switch (choice)
-		{
-		case DISPLAY_DB:
+	
+		// display database choice
+		if (choice == 1)
 		{
 			db.DisplayDB();
 
-			break;
+			
 		}
-		case 2:
+		/*if (choice = 2)
 		{
 			string title;
 			cin >> title;
@@ -359,57 +361,98 @@ int main() {
 			string actor2 = entry.actor2;
 			string actor3 = entry.actor3;
 			db.DisplayActor(actor1, CompareByScoreDescending);
-			break;
-		}
-		case 3:
-		{
-			string entry1,entry2;
-			int amount = 0;
-			cout << "would you like to add 1 or 2 genres: ";
-			cin >> amount;
+			
+		}*/
 
-			if (amount == 1)
+		// top billed actor search choice
+		if (choice == 2)
+		{
+			string movname1, movname2;
+			char input;
+			
+			cout << "a. 1 movie input" << endl;
+			cout << "b. 2 movie inputs" << endl;
+			cin >> input;
+			if (input == 'a')
 			{
-				cout << "choose a genre: ";
-				cin >> entry1;
-				r.setSortFunction(CompareByScoreDescending); //sorts by rating
-				r.AddGenre(entry1); // sends user entry too add genre
-				r.RecommendByGenres(); // displays recommends user entry
+				cout << "enter movie title: ";
+				cin.ignore();
+				getline(cin, movname1);
+				r.setSortFunction(CompareByScoreDescending);
+				r.AddMovie(movname1);
+				r.RecommendByTopActor();
 			}
-			if (amount == 2)
+			else if (input == 'b')
+			{
+				cout << "enter movie title 1: ";
+				cin.ignore();
+				getline(cin, movname1);
+				cout << "enter movie title 2: ";
+				cin.ignore();
+				getline(cin, movname2);
+				system("cls");
+				r.setSortFunction(CompareByScoreDescending);
+				r.AddMovie(movname1);
+				r.AddMovie(movname2);
+				r.RecommendByTopActor(); // recommends by top billed actor in that movie title
+			}
+		}
+
+		else if (choice == 3)
+		{
+			string genre1;
+			string genre2;
+			char genrenum;
+			cout << "a. input 1 genre" << endl;
+			cout << "b. input 2 genres" << endl;
+			cin >> genrenum;
+			system("cls");
+
+			// if user chooses 1 genre input
+			if (genrenum == 'a')
 			{
 				cout << "enter genre 1: ";
-				cin >> entry1;
-				cout << "enter genre 2: ";
-				cin >> entry2;
+
+				cin >> genre1;
+				system("cls");
+
 				r.setSortFunction(CompareByScoreDescending); //sorts by rating
-				r.AddGenre(entry1); // sends user entry too add genre
-				r.AddGenre(entry2);
+				r.AddGenre(genre1); // sends user entry too add genre
 				r.RecommendByGenres(); // displays recommends user entry
 			}
-			else
+			else if (genrenum == 'b')
 			{
-				cout << "press any key to exit";
-
+				cout << "enter genre 1: ";
+				cin >> genre1;
+				cout << "enter genre 2: ";
+				cin >> genre2;
+				system("cls");
+				
+				r.setSortFunction(CompareByScoreDescending); //sorts by rating
+				r.AddGenre(genre1); // sends user entry too add genre
+				r.AddGenre(genre2); // sends user entry too add genre
+				r.RecommendByGenres(); // displays recommends user entry
 			}
 		}
-		case 4:
-		{
-			string t;
-			cout << "type a movie title: ";
-			cin >> t;
-			r.setSortFunction(CompareByScoreDescending);
-			r.AddMovie(t);
-			r.RecommendByTopActor(); // recommends by top billed actor in that movie title
 
-		}
-		default:
+		else if (choice == 4)
 		{
-			std::cout << "unknown option\n";
-			break;
+			string dirname;
+			cout << "enter director name: ";
+			cin.ignore();
+			getline(cin, dirname);
+			r.DisplayDirector(dirname);
 		}
+		
+		else if (choice == 5)
+		{
+			string actorname;
+			cout << "enter actor name: ";
+			cin.ignore();
+			getline(cin, actorname);
+			r.DisplayActor(actorname);
+			r.RecommendByAllActors();
 		}
-	} while (choice > 0);
 
 
 
