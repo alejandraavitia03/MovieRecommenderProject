@@ -52,10 +52,34 @@ Overall
  > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
+
  
  ## Screenshots
- Welcome page:
+ This will show a quick demo of someone who has openend the app. After that the chose to change the way our program sorts their output and chose to do it by descending rating. After they decide to add a movie, Fight Club, by which they will be receiving their recommendations. Once that movie is inserted they will chose to see their recommendation by Director and will get all they movies with the director of Fight Club, David Fincher. 
+ **Welcome page:**
+ 
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.28.14%20AM.png)
+ 
+ **Sorting Input:**
+ 
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.28.35%20AM.png)
+ 
+ **Chose descending rating.**
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.28.55%20AM.png)
+ 
+ **Add movie: Fight Club**
+ 
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.29.30%20AM.png)
+ 
+ **Choosing Recommendation by Director**
+ 
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.30.07%20AM.png)
+ 
+ **Reccomendation with David Fincher:**
+ 
+ ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/master/Project_Screenshots/Screen%20Shot%202021-03-11%20at%201.30.27%20AM.png)
+ 
+ 
  ## Installation/Usage
  Our project user interface will be through the executable.
  Instructions on installing and running our application:
