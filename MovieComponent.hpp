@@ -1,45 +1,30 @@
-//
-//  MovieComponent.h
-//  Composite_Final_Project
-//
-//  Created by Alejandra A on 3/9/21.
-//
-//Movie:
-//  Title, Actors, Rating, Director, Description
-//	This is my interface for every Movie (Leaf)
-// and MovieGenres (composite) we make
-
 
 #ifndef MovieComponent_h
 #define MovieComponent_h
 
 #include <vector>
+#include <iomanip>
 #include <string>
 using namespace std;
-
+//Movie:
+//  Title, Actors, Rating, Director, Description
+//This is my interface for every Movie (Leaf)
+// and MovieGenres (composite) we make
 class MovieComponent{
-    
-protected:
-    vector<string> genre;
-    string title;
 
 public:
-    
-    MovieComponent(): genre(), title("") {};
-    MovieComponent(vector<string> genre, string title) : genre(genre), title(title){};
     //Add a new MovieComponent
+    virtual void addComponent(MovieComponent const &newMovieComponent) = 0;
+    
+    //Remove a MovieComponent
+    virtual void removeMovieComponent(MovieComponent const &newMovieComponent) = 0;
+    
+    //Get component can't get to work
+    //virtual MovieComponent const &getComponent(int componentIndex) = 0;
 
-    //virtual void add(MovieComponent newMovieComponent) = 0;           
-   
-    //Remove a mediaComponent
-    //virtual void remove(MovieComponent newMovieComponent) = 0;
-                        
-    //Get component
-    //virtual MovieComponent getComponent(int componentIndex) = 0;
-    virtual string getTitle()= 0;
-    virtual void setTitle(string newTitle) = 0;
- 
-    virtual void displayMovieInfo() = 0;
+    virtual string getMovieTitle()= 0; //Will allow to get the Movie title
+    virtual string getGenreNames() = 0; //Will allow to get the genre names
+    virtual void displayInfo() = 0; //This will print specefic to the Movie or Genre
 };
 
 #endif /* MovieComponent_h */
