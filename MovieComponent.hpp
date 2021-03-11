@@ -18,16 +18,17 @@
 using namespace std;
 
 class MovieComponent{
+    
 protected:
-    string genre;
-    string description;
+    vector<string> genre;
+    string title;
+
 public:
-    virtual ~MovieComponent() = default;
-    MovieComponent(): genre(""), description("") {};
-    MovieComponent(string genre, string description) : genre(genre), description(description){};
-    //Pure Virutal Functions
-  
+    
+    MovieComponent(): genre(), title("") {};
+    MovieComponent(vector<string> genre, string title) : genre(genre), title(title){};
     //Add a new MovieComponent
+
     //virtual void add(MovieComponent newMovieComponent) = 0;           
    
     //Remove a mediaComponent
@@ -35,24 +36,11 @@ public:
                         
     //Get component
     //virtual MovieComponent getComponent(int componentIndex) = 0;
-
-    //Get a Movie name
-    virtual string getMovieName() = 0;
-
-    //Get cast
-    virtual string getActorName() = 0;
-
-    //Get rating
-    virtual double getMovieRating() = 0;
-
-    //Get director
-    virtual string getDirector() = 0;
-
-    //Get Description
-    virtual string getDescription()= 0;
-
-    //Display
+    virtual string getTitle()= 0;
+    virtual void setTitle(string newTitle) = 0;
+ 
     virtual void displayMovieInfo() = 0;
 };
 
-#endif /* MovieComponent_hpp */
+#endif /* MovieComponent_h */
+
