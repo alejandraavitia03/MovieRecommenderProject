@@ -62,6 +62,18 @@ Overall
   * Download our code from the master branch
   * Open project on an IDE or text editor.
   * Run the program
- ## Testing
+  # Usage
+  * step 1: add a movie or genre
+  * step 2: choose a sort method
+  * step 3: click a recommend choice
+> recommend by top billed actor
+* how this works is that, whatever movie you have entered into your favorites, it will recommend movies based off the top billed actor in that movie
+> Recommend by Director
+* how this works is that whatever movie you have entered into your favorite, it will recommend movies based off that director
+> Recommend by Genre
+* how this works is that whatever movie or genre you have entered into your like list, it will recommend all the movies in that genre sorted by whichever sort you choose
+> Recommend by Movies actor Played in
+* how this works it will recommend movies based off whatever actor you have typed in. it will then sort and display all movies he or she has been featured in
+> ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
