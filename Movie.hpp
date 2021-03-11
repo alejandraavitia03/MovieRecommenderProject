@@ -1,3 +1,4 @@
+
 #ifndef Movie_h
 #define Movie_h
 
@@ -5,18 +6,16 @@
 
 class Movie : public MovieComponent
 {
-protected:
-    string description;
+private:
+    string title;
     vector<string> cast;
     double rating;
     string director;
     
 public:
-    Movie():MovieComponent(){};
-    Movie(string title, vector<string> genres) : MovieComponent( genres, title) {};
     
-    Movie(string newTitle, vector<string> newCast, double newRating, string newDirector,string newDescription, string newGenre){
-        description = newDescription;
+    Movie(string newTitle, vector<string> newCast, double newRating, string newDirector){
+        title = newTitle;
         cast = newCast;
         rating = newRating;
         director = newDirector;
@@ -27,34 +26,15 @@ public:
     vector<string> getCast() { return cast; }
     double getRating(){ return rating; }
     string getDirector(){ return director; }
-    string getDescription(){ return description; }
-    vector<string> getGenres(){ return genre;}
+
     
- 
-    void setTitle(string newTitle){
-        title = newTitle;
-    }
-    void setCast(vector<string> newCast){
-        cast = newCast;
-    }
-    void setRating(double newRating){
-        rating = newRating;
-    }
-    void setDirector(string newDirector){
-        director = newDirector;
-    }
-    void setDescription(string newDescription){
-        description = newDescription;
-    }
-   void setGenres(vector<string> newGenres){
-        genre = newGenres;
-    }
     
-    void displayMovieInfo(){
+    void displayInfo(){
         
-        cout << getTitle() << " produced by " << getDirector() << ", with a rating of: " << getRating() << "." << endl;
-        cout << "Decription of " << getTitle() << ": " << getDescription() << endl;
-        cout << "Actors: ";
+        cout << "Movie Title: " << setw(8) << getTitle() << endl;
+        cout << "Directed by: " << setw(8) << getDirector() <<  endl;
+        cout << "Rating of  : " << setw(8) << getRating() << endl;
+        cout << "Actors     : " << setw(8);
         for(int i = 0; i < cast.size(); i++){
             cout << cast.at(i) << ", ";
         }
