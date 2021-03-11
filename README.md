@@ -57,11 +57,11 @@ Overall
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Our project user interface will be through the executable.
- > Instructions on installing and running our application:
- > 		1. Download our code from the master branch
- > 		2. Open project on an IDE or text editor.
- > 		3. Run the program
+ Our project user interface will be through the executable.
+ Instructions on installing and running our application:
+ 		1. Download our code from the master branch
+ 		2. Open project on an IDE or text editor.
+ 		3. Run the program
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
