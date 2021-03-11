@@ -27,7 +27,7 @@
 * Design patterns we will be using:
 	* Strategy Pattern: This design pattern was picked because it allow us to have something that does one thing and implement them in different ways. For example we have two interfaces, Sort and Recommend that will be called differently. Recommend will allow us to recommend by Genre, Director and Actors. The sorting algorithms will sort the recommended list by ratings and release date.
 
-	* Composite Pattern:  
+	* Composite Pattern: This design was chosed for its hierarchy structure. As we know many movies do not have only one single genre. We will hold the movies by their genres. Our interface MovieComponent will be inherited by the MovieGenre composite and will be used to make more components. In this hierarchy our lief is Movie and will not have any children.
 		
 
 
