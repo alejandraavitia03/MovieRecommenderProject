@@ -55,14 +55,14 @@ Overall
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ Welcome page:
  ## Installation/Usage
  Our project user interface will be through the executable.
  Instructions on installing and running our application:
   * Download our code from the master branch
   * Open project on an IDE or text editor.
   * Run the program
-  # Usage
+  ### Usage
   * step 1: add a movie or genre
   * step 2: choose a sort method
   * step 3: click a recommend choice
