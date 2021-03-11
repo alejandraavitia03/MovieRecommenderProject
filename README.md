@@ -47,12 +47,6 @@ Overall
 ![alt text](https://github.com/cs100/final-project-nkare001-aavit004-fcris002/blob/3df8d614f20d55343067f6b030f0f667bf8e86e6/UML's/FAN%20Spotlight-Overall.png)
 
  
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
-
  
  ## Screenshots
  This will show a quick demo of someone who has openend the app. After that the chose to change the way our program sorts their output and chose to do it by descending rating. After they decide to add a movie, Fight Club, by which they will be receiving their recommendations. Once that movie is inserted they will chose to see their recommendation by Director and will get all they movies with the director of Fight Club, David Fincher. 
@@ -99,5 +93,5 @@ Overall
 > Recommend by Movies actor Played in
 * how this works it will recommend movies based off whatever actor you have typed in. it will then sort and display all movies he or she has been featured in
 > ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ To be completed by Frances
  
