@@ -10,8 +10,14 @@
 #include <set>
 #include <algorithm>
 #include <functional>
+#include <conio.h>
 #include  "Strategy.h"
 using namespace std;
+
+
+
+
+
 enum Options
 {
 	EXIT,
@@ -24,10 +30,13 @@ enum Options
 	RECOMMEND_BY_TOP_ACTOR,
 	RECOMMEND_BY_DIRECTOR,
 	RECOMMEND_BY_GENRE,
-	RECOMMEND_BY_ALL_ACTORS,
+	//RECOMMEND_BY_ALL_ACTORS,
 	DISPLAY_ACTOR,
 
 };
+
+
+
 int menu(int* choice)
 {
 
@@ -40,12 +49,12 @@ int menu(int* choice)
 	cout << RECOMMEND_BY_TOP_ACTOR << ". Recommend by top billed actors\n";
 	cout << RECOMMEND_BY_DIRECTOR << ". recommend by director\n";
 	cout << RECOMMEND_BY_GENRE << ". recommend by genre\n";
-	cout << RECOMMEND_BY_ALL_ACTORS << ". recommend by all actors\n";
+	//cout << RECOMMEND_BY_ALL_ACTORS << ". recommend by all actors\n";
 	cout << DISPLAY_ACTOR << ". recommend by movies actor played in\n";
 	cout << EXIT << " EXIT\n";
 	cout << "input choice number: ";
 	cin >> *choice;
-	cin.ignore(numeric_limits<streamsize>::max(),'\n');
+	cin.ignore(numeric_limits<streamsize>::max(),'\n'); // for errors i kept getting, kept remembering previous input
 	return *choice;
 
 }
@@ -55,6 +64,7 @@ class MovieDB
 {
 
 public:
+	
 	MovieDB(ifstream& file) 
 	{
 		if (!file.is_open())
@@ -90,12 +100,12 @@ public:
 			e.actor2 = actor2;
 			e.actor3 = actor3;
 			e.rating = rating;
-			e.year = atoi(year.c_str());
+			e.year = atoi(year.c_str()); // accepts a c-string, converts the cstring to an int and returns that val
 			e.score = atoi(score.c_str());
 
 			//add all the genres to the entry
-			std::istringstream iss(genre);
-			std::string token;
+			std::istringstream iss(genre); // all genre names in stringstream
+			std::string token; // temporary string to hold a genre. pulling out the | between genre names
 			while (std::getline(iss, token, '|'))
 			{
 				e.genre.insert(token);
@@ -107,7 +117,9 @@ public:
 				GenreDB[g].push_back(e);
 			}
 			TitleDB[moviename] = e;
-			if (actor1.compare(""))
+
+			// checking for empty strings in case no actor in column , using a member function of std::string ie:compare
+			if (actor1.compare("")) 
 			{
 				ActorDB[actor1].push_back(e);
 			}
@@ -132,7 +144,7 @@ public:
 		std::cout << "year: " << entry.year << '\n';
 		std::cout << "score: " << entry.score << '\n';
 		std::cout << "genre: ";
-		for (auto g : entry.genre)
+		for (auto g : entry.genre) // for genre, because it is seperated by | run a loop so it can read through each genre per movie
 		{
 			std::cout << g << "|";
 		}
@@ -179,6 +191,27 @@ public:
 			DisplayEntry(entry);
 		}
 	}
+
+	void intro()
+	{
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+	
+		cout << "\t\t\t\t   HELLO! WELCOME TO FAN MOVIE RECOMMENDER" << endl;
+	
+
+		cout << "\t\t\t\t\t    PRESS " << char(175) << "ENTER" << char(174) << " TO BEGIN" << endl;
+
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+
+	}
+
 	//private:
 	std::map<string, Entry> TitleDB;
 	std::map<string, vector<Entry>> ActorDB;
@@ -244,6 +277,12 @@ public:
 		}
 		DisplayVector(moviesRecommended);
 	}
+
+	/*
+	 looks through list of movies liked and finds all the movies
+	 by each director.
+	 then sorts according to the chosen strategy
+	*/
 	void RecommendByDirector() 
 	{
 		std::vector<Entry> moviesRecommended;
@@ -282,7 +321,7 @@ public:
 		}
 		DisplayVector(moviesRecommended);
 	}
-	void RecommendByAllActors()
+	/*void RecommendByAllActors()
 	{
 		std::vector<Entry> moviesRecommended;
 		std::set<std::string> titles;
@@ -320,7 +359,7 @@ public:
 			}
 		}
 		DisplayVector(moviesRecommended);
-	}
+	}*/
 	void DisplayVector(std::vector<Entry> movies) 
 	{
 		std::sort(movies.begin(), movies.end(), std::ref(*sortStrategy));
@@ -357,6 +396,7 @@ int main()
 
 	ifstream file("movie11.txt");
 	int choice = 0;
+	char letter = ' ';
 
 
 
@@ -380,7 +420,12 @@ int main()
 
 
 	//	r.DisplayGenre("Horror");
-
+	while (letter != 13)
+	{
+		db.intro();
+		letter = _getch();
+		system("cls");
+	}
 	do{
 		menu(&choice);
 		
@@ -403,7 +448,7 @@ int main()
 
 			}*/
 
-			// top billed actor search choice
+			
 			if (choice == CHANGE_SORT_METHOD) {
 				std::cout << "1. Title ascending\n";
 				std::cout << "2. Title descending\n";
@@ -439,12 +484,14 @@ int main()
 					r.changeStrategy(&cbsd);
 					std::cout << "   Sorting by score descending\n";
 				}
+				system("cls");
 			}else if (choice == ADD_MOVIE)
 			{
 				std::string title;
 				std::cout << "movie title: ";
 				getline(cin, title);
 				r.AddMovie(title);
+				system("cls");
 			}
 
 			else if (choice == ADD_GENRE)
@@ -454,6 +501,7 @@ int main()
 				std::cin >> genre;
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				r.AddGenre(genre);
+				system("CLS");
 
 			}
 			else if (choice == DELETE_MOVIE)
@@ -462,6 +510,7 @@ int main()
 				std::cout << "movie title: ";
 				getline(cin, title);
 				r.DeleteMovie(title);
+				system("CLS");
 			}
 			else if (choice == DELETE_GENRE)
 			{
@@ -470,27 +519,33 @@ int main()
 				std::cin >> genre;
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				r.DeleteGenre(genre);
+				system("CLS");
 			}
 			else if (choice == RECOMMEND_BY_TOP_ACTOR)
 			{
 				r.RecommendByTopActor();
+				
 			}
 			else if (choice == RECOMMEND_BY_DIRECTOR)
 			{
 				r.RecommendByDirector();
+				
 			}
 			else if (choice == RECOMMEND_BY_GENRE)
 			{
 				r.RecommendByGenres();
+				
 			}
-			else if (choice == RECOMMEND_BY_ALL_ACTORS)
-			{
-				r.RecommendByAllActors();
-			}
+			//else if (choice == RECOMMEND_BY_ALL_ACTORS)
+			//{
+			//	r.RecommendByAllActors();
+			//	
+			//}
 			else if (choice == DISPLAY_ACTOR) {
 				std::string actor;
 				std::cout << "actor name: ";
 				getline(cin, actor);
+				system("CLS");
 				
 				r.DisplayActor(actor);
 			}
